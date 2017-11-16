@@ -5,3 +5,6 @@ target
 .bpmn
 .idea
 *.iml
+
+*.core.prefs.xml
+*.core.prefs
