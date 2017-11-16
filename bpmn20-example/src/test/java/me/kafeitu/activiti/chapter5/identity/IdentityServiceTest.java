@@ -110,5 +110,9 @@ public class IdentityServiceTest extends AbstractTest {
         Group groupContainsHenryyan = identityService.createGroupQuery().groupMember("henryyan").singleResult();
         assertNotNull(groupContainsHenryyan);
         assertEquals("deptLeader", groupContainsHenryyan.getId());
+
+        identityService.deleteMembership(user.getId(),group.getId());
+        identityService.deleteGroup(group.getId());
+        identityService.deleteUser(user.getId());
     }
 }
